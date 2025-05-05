@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,6 +32,16 @@ public class Stat
 
     public void RemoveModifier(int _modifier)
     {
-        modifiers.RemoveAt(_modifier);
+        modifiers.Remove(_modifier);
+    }
+
+    internal void AddModifier(Stat strength)
+    {
+        throw new NotImplementedException();
+    }
+
+    internal void RemoveModifier(Stat strength)
+    {
+        throw new NotImplementedException();
     }
 }
