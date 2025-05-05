@@ -10,20 +10,26 @@ public class ItemDrop : MonoBehaviour
 
     [SerializeField] private GameObject dropPrefab;
 
-
     public virtual void GenerateDrop()
     {
+        dropList.Clear(); // Clear any old data just in case
+
+        // Build the drop list based on drop chances
         for (int i = 0; i < possibleDrop.Length; i++)
         {
             if (Random.Range(0, 100) <= possibleDrop[i].dropChance)
                 dropList.Add(possibleDrop[i]);
         }
 
-        for (int i = 0; i < maxItemsToDrop; i++)
-        {
-            ItemData randomItem = dropList[Random.Range(0, dropList.Count - 1)];
+        // Safety check: make sure we have items to drop
+        int itemsToDrop = Mathf.Min(maxItemsToDrop, dropList.Count);
 
-            dropList.Remove(randomItem);
+        for (int i = 0; i < itemsToDrop; i++)
+        {
+            int randomIndex = Random.Range(0, dropList.Count); // Correct bounds
+            ItemData randomItem = dropList[randomIndex];
+
+            dropList.RemoveAt(randomIndex);
             DropItem(randomItem);
         }
     }
@@ -32,7 +38,6 @@ public class ItemDrop : MonoBehaviour
     {
         GameObject newDrop = Instantiate(dropPrefab, transform.position, Quaternion.identity);
         Vector2 randomVelocity = new Vector2(Random.Range(-5, 5), Random.Range(4, 8));
-
         newDrop.GetComponent<ItemObject>().SetupItem(_itemData, randomVelocity);
     }
 }

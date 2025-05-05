@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class ItemEffect : ScriptableObject
 {
-    public virtual void ExecuteEffect()
+    public virtual void ExecuteEffect(Transform _enemyPosition)
     {
         // This method should be overridden in derived classes
         Debug.Log("Executing base item effect.");
