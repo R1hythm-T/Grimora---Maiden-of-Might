@@ -30232,6 +30232,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 77efabe641c451a46a14e01f26fbe6aa, type: 2}
   - {fileID: 11400000, guid: 7acfa84cda7db5b44b7a9b8a8442d99c, type: 2}
   - {fileID: 11400000, guid: df8875dd80fb2da49bd55239c0f3f518, type: 2}
+  - {fileID: 11400000, guid: 12acfde5023867448af3d48bbaa96ced, type: 2}
   equipment: []
   inventory: []
   stash: []
@@ -64155,7 +64156,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.31843, y: -0.10401535, z: -10.026368}
+  m_LocalPosition: {x: -30.54083, y: -0.10401535, z: -10.026368}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -67382,7 +67383,7 @@ Transform:
   m_GameObject: {fileID: 1329046844}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.31843, y: -0.10401535, z: -10.026368}
+  m_LocalPosition: {x: -30.54083, y: -0.10401535, z: -10.026368}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
