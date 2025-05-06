@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAnimationTriggers : MonoBehaviour
 {
     private Player player => GetComponentInParent<Player>();
+
     private void AnimationTrigger()
     {
         player.AnimationTrigger();
@@ -20,28 +21,20 @@ public class PlayerAnimationTriggers : MonoBehaviour
             {
                 EnemyStats _target = hit.GetComponent<EnemyStats>();
 
-                player.stats.DoDamage(_target);
-
-                Inventory.instance.GetEquipment(EquipmentType.Weapon).Effect(_target.transform);
+                if (_target != null)
+                    player.stats.DoDamage(_target);
 
                 ItemData_Equipment weaponData = Inventory.instance.GetEquipment(EquipmentType.Weapon);
+
                 if (weaponData != null)
-                { 
                     weaponData.Effect(_target.transform);
-                }
+
+
             }
         }
     }
-
-
-
     private void ThrowSword()
     {
-        if (!player.sword)
-
-        {
-            SkillManager.instance.sword.CreateSword();
-            return;
-        }
+        SkillManager.instance.sword.CreateSword();
     }
 }

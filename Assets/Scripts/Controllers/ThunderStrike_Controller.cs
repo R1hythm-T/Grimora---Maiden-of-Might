@@ -5,7 +5,6 @@ using UnityEngine;
 public class ThunderStrikeController : MonoBehaviour
 {
     protected PlayerStats playerStats;
-    // Start is called before the first frame update
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
