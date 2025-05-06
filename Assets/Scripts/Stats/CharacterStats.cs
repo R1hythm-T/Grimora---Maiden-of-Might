@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -76,6 +77,21 @@ public class CharacterStats : MonoBehaviour
             ApplyIgniteDamage();
     }
 
+    public virtual void IncreaseStatBy(int _modifier, float _duration, Stat _statToModify)
+    {
+        // start corototuine for stat increase
+        StartCoroutine(StatModCoroutine(_modifier, _duration, _statToModify));
+    }
+
+    private IEnumerator StatModCoroutine(int _modifier, float _duration, Stat _statToModify)
+    {
+        _statToModify.AddModifier(_modifier);
+
+        yield return new WaitForSeconds(_duration);
+
+        _statToModify.RemoveModifier(_modifier);
+    }
+
     public virtual void DoDamage(CharacterStats _targetStats)
     {
         if (TargetCanAvoidAttack(_targetStats))
@@ -88,7 +104,8 @@ public class CharacterStats : MonoBehaviour
 
         totalDamage = CheckTargetArmor(_targetStats, totalDamage);
         _targetStats.TakeDamage(totalDamage);
-        //DoMagicalDamage(_targetStats);
+
+        DoMagicalDamage(_targetStats);
     }
 
     #region Magical damage and ailments
@@ -259,6 +276,17 @@ public class CharacterStats : MonoBehaviour
 
         if (currentHealth < 0 && !isDead)
             Die();
+    }
+
+    public virtual void IncreaseHealthBy(int _amount)
+    {
+        currentHealth += _amount;
+
+        if (currentHealth > GetMaxHealthValue())
+            currentHealth = GetMaxHealthValue();
+
+        if (onHealthChanged != null)
+            onHealthChanged();
     }
 
     protected virtual void DecreaseHealthBy(int _damage)
