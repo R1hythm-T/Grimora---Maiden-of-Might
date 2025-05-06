@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d29359966a4d1143b046d73c74fc6ff, type: 3}
-  m_Name: Heal on Hit
+  m_Script: {fileID: 11500000, guid: 250e1a55dc6b81d4292686cc2d9f6f9b, type: 3}
+  m_Name: Freeze enemies effect
   m_EditorClassIdentifier: 
-  healPercent: 0.1
+  duration: 2

@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 1
   itemName: Armor Flask
-  icon: {fileID: 0}
+  icon: {fileID: -165920498, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   dropChance: 0
   equipmentType: 3
-  itemCooldown: 0
-  itemEffects: []
+  itemCooldown: 15
+  itemEffects:
+  - {fileID: 11400000, guid: 0edc88d6a825b5e4b9109d4aa19bc6a8, type: 2}
+  - {fileID: 11400000, guid: 9525e42ad2f256549bcfb0cdf809f296, type: 2}
   strength: 0
   agility: 0
   intelligence: 0

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class Inventory : MonoBehaviour
 {
@@ -30,6 +32,8 @@ public class Inventory : MonoBehaviour
     [Header("Items Cooldown")]
     private float flaskCooldown;
     private float lastTimeUsedFlask;
+    private float armorCooldown;
+    private float lastTimeUsedArmor;
 
     private void Awake()
     {
@@ -278,4 +282,18 @@ public class Inventory : MonoBehaviour
             Debug.Log("Flask on cooldown;");
     }
 
+    public bool CanUseArmor()
+    {
+        ItemData_Equipment currentArmor = GetEquipment(EquipmentType.Armor);
+
+        if (Time.time > lastTimeUsedArmor + armorCooldown)
+        {
+            armorCooldown = currentArmor.itemCooldown;
+            lastTimeUsedArmor = Time.time;
+            return true;
+        }
+
+        Debug.Log("Armor on Cooldown");
+        return false;
+    }
 }
