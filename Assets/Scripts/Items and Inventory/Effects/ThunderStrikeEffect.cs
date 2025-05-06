@@ -4,8 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "Thunder Strike Effect", menuName = "Data/Item Effect/Thunder Strike")]
 
-
-public class NewBehaviourScript : ItemEffect
+public class ThunderStrikeEffect : ItemEffect
 {
     [SerializeField] private GameObject thunderstrikePrefab;
     public override void ExecuteEffect(Transform _enemyPosition)

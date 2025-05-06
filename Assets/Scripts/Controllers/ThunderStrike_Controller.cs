@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThunderStrikeController : MonoBehaviour
+public class ThunderStrike_Controller : MonoBehaviour
 {
     protected PlayerStats playerStats;
 
