@@ -20,6 +20,8 @@ MonoBehaviour:
   itemCooldown: 0
   itemEffects:
   - {fileID: 11400000, guid: 46a87f2f9a92c7345a58565dcb3dc79f, type: 2}
+  itemEffectDescription: 'Unique: Each successful hit heals you for 10% of your max
+    health.'
   strength: 0
   agility: 0
   intelligence: 0

@@ -20,6 +20,8 @@ MonoBehaviour:
   itemCooldown: 0
   itemEffects:
   - {fileID: 11400000, guid: e6b1061809d4cdb449af6b2f496340b7, type: 2}
+  itemEffectDescription: 'Unique: Each successful hit lands a thunderstrike on enemy
+    and deals massive lightning damage.'
   strength: 0
   agility: 0
   intelligence: 0

@@ -20,6 +20,8 @@ MonoBehaviour:
   itemCooldown: 5
   itemEffects:
   - {fileID: 11400000, guid: 9b56c5b84e16e4648bafd6829fc2acdc, type: 2}
+  itemEffectDescription: 'Unique: when below 10% HP, freezes all enemies in a short
+    radius on next incoming attack.'
   strength: 4
   agility: 0
   intelligence: 0

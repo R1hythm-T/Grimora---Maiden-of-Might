@@ -20,6 +20,7 @@ MonoBehaviour:
   itemCooldown: 0
   itemEffects:
   - {fileID: 11400000, guid: eb2a6458a66809d4dabad81b9bcc79e5, type: 2}
+  itemEffectDescription: +15 fire damage for 5s.
   strength: 0
   agility: 0
   intelligence: 0

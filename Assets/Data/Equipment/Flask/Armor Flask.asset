@@ -21,6 +21,7 @@ MonoBehaviour:
   itemEffects:
   - {fileID: 11400000, guid: 0edc88d6a825b5e4b9109d4aa19bc6a8, type: 2}
   - {fileID: 11400000, guid: 9525e42ad2f256549bcfb0cdf809f296, type: 2}
+  itemEffectDescription: 'Unique: +50 armor for 7s and heals for 30% of max health.'
   strength: 0
   agility: 0
   intelligence: 0

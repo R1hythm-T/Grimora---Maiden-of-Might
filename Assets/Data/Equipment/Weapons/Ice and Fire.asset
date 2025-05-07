@@ -21,6 +21,8 @@ MonoBehaviour:
   itemEffects:
   - {fileID: 11400000, guid: faccedc2777199449be3462e3e0055c4, type: 2}
   - {fileID: 11400000, guid: 3d64ee3712e38444f970a74412e0ebc5, type: 2}
+  itemEffectDescription: 'Unique: Each 3rd combo attack, an ice and fire projectile
+    will be launched.'
   strength: 0
   agility: 0
   intelligence: 0
