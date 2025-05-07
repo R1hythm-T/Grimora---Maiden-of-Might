@@ -109,7 +109,6 @@ public class Inventory : MonoBehaviour
 
     private void UpdateSlotUI()
     {
-        // Update Equipment Slots
         for (int i = 0; i < equipmentSlot.Length; i++)
         {
             foreach (KeyValuePair<ItemData_Equipment, InventoryItem> item in equipmentDictionary)
@@ -119,25 +118,36 @@ public class Inventory : MonoBehaviour
             }
         }
 
-        // Clean all slots
-        foreach (var slot in inventoryItemSlot) slot.CleanUpSlot();
-        foreach (var slot in stashItemSlot) slot.CleanUpSlot();
+        for (int i = 0; i < inventoryItemSlot.Length; i++)
+        {
+            inventoryItemSlot[i].CleanUpSlot();
+        }
 
-        // Update inventory slots
-        for (int i = 0; i < Mathf.Min(inventory.Count, inventoryItemSlot.Length); i++)
+        for (int i = 0; i < stashItemSlot.Length; i++)
+        {
+            stashItemSlot[i].CleanUpSlot();
+        }
+
+
+        for (int i = 0; i < inventory.Count; i++)
         {
             inventoryItemSlot[i].UpdateSlot(inventory[i]);
         }
 
-        // Update stash slots
-        for (int i = 0; i < Mathf.Min(stash.Count, stashItemSlot.Length); i++)
+        for (int i = 0; i < stash.Count; i++)
         {
             stashItemSlot[i].UpdateSlot(stash[i]);
         }
 
-        // Update stats
-        foreach (var slot in statSlot) slot.UpdateStatValueUI();
+        UpdateStatsUI();
+    }
 
+    public void UpdateStatsUI()
+    {
+        for (int i = 0; i < statSlot.Length; i++) // update info of stats in character UI
+        {
+            statSlot[i].UpdateStatValueUI();
+        }
     }
 
     public void AddItem(ItemData _item)

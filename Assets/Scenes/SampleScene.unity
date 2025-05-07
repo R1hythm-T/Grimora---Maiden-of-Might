@@ -69983,7 +69983,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   evasion:
-    baseValue: 10
+    baseValue: 99
     modifiers: 
   magicResistance:
     baseValue: 1
@@ -81108,7 +81108,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   maxHealth:
-    baseValue: 100
+    baseValue: 120
     modifiers: 
   armor:
     baseValue: 0
@@ -83719,6 +83719,7 @@ GameObject:
   - component: {fileID: 1843215726}
   - component: {fileID: 1843215727}
   - component: {fileID: 1843215728}
+  - component: {fileID: 1843215730}
   m_Layer: 0
   m_Name: SkillManager
   m_TagString: Untagged
@@ -83784,7 +83785,7 @@ MonoBehaviour:
   cooldown: 0
   clonePrefab: {fileID: 6676490365168333638, guid: 9ee308fb2fd76304ba8358b6c0b9a39e, type: 3}
   cloneDuration: 3
-  canAttack: 0
+  canAttack: 1
   canDuplicateClone: 0
   chanceToDuplicate: 50
   crystalInseadOfClone: 0
@@ -83802,20 +83803,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 0
   swordType: 0
+  bounceUnlockButton: {fileID: 1975995227}
   bounceAmount: 5
   bounceGravity: 4
   bounceSpeed: 20
+  pierceUnlockButton: {fileID: 792400529}
   pierceAmount: 3
   pierceGravity: 1
+  spinUnlockButton: {fileID: 51991158}
   hitCooldown: 0.3
   maxTravelDistance: 7
   spinDuration: 1
   spinGravity: 1
+  swordUnlockButton: {fileID: 1204383458}
   swordPrefab: {fileID: 7985976132316381480, guid: f9fe676eca6de45468be27b3eae07221, type: 3}
   launchForce: {x: 60, y: 30}
   swordGravity: 0.5
   freezeTimeDuration: 1.5
   returnSpeed: 60
+  timeStopUnlockButton: {fileID: 2035419763}
+  vulnerableUnlockButton: {fileID: 243934884}
   numberOfDots: 40
   spaceBetweenDots: 0.06
   dotPrefab: {fileID: 1310539371924710738, guid: 1fd55948c82633e43900a5e36da5aacd, type: 3}
@@ -83891,6 +83898,24 @@ MonoBehaviour:
   restoreUnlockButton: {fileID: 1319209668}
   restoreHealthPercentage: 0.1
   parryWithMirageUnlockButton: {fileID: 1013591306}
+--- !u!114 &1843215730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843215721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cdc48ae306934947a8b1fc4168b4ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 0
+  unlockDodgeButton: {fileID: 1186125160}
+  evasionAmount: 10
+  dodgeUnlocked: 0
+  unlockMirageDodgeButton: {fileID: 1172439944}
+  dodgeMirageUnlocked: 0
 --- !u!224 &1846203435 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7385611708778133275, guid: aa8f88a114f1e5347a8bbeb74bbcf9c5, type: 3}
