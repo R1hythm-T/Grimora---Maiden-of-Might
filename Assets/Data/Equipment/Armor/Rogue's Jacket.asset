@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 1
   itemName: Rogue's Jacket
-  icon: {fileID: 957708663, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
+  itemIcon: {fileID: 1667790894, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   dropChance: 0
   equipmentType: 1
   itemCooldown: 0
@@ -29,9 +29,11 @@ MonoBehaviour:
   critPower: 0
   maxHealth: 50
   armor: 0
-  evasion: 5
+  evasion: 10
   magicResistance: 0
   fireDamage: 0
   iceDamage: 0
   lightningDamage: 0
-  craftingMaterials: []
+  craftingMaterials:
+  - data: {fileID: 11400000, guid: c9070e2b40125e2468ccf4d58f33fb6c, type: 2}
+    stackSize: 5

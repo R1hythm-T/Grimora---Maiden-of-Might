@@ -5,13 +5,13 @@ using UnityEngine.EventSystems;
 
 public class UI_ItemSlot : MonoBehaviour , IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField] private Image itemImage;
-    [SerializeField] private TextMeshProUGUI itemText;
+    [SerializeField] protected Image itemImage;
+    [SerializeField] protected TextMeshProUGUI itemText;
 
-    private UI ui;
+    protected UI ui;
     public InventoryItem item;
 
-    private void Start()
+    protected virtual void Start()
     {
         ui = GetComponentInParent<UI>();
     }
@@ -24,7 +24,7 @@ public class UI_ItemSlot : MonoBehaviour , IPointerDownHandler, IPointerEnterHan
 
         if (item != null)
         {
-            itemImage.sprite = item.data.icon;
+            itemImage.sprite = item.data.itemIcon;
 
             if (item.stackSize > 1)
             {
@@ -62,6 +62,8 @@ public class UI_ItemSlot : MonoBehaviour , IPointerDownHandler, IPointerEnterHan
         {
             Inventory.instance.EquipItem(item.data);
         }
+
+        ui.itemToolTip.HideToolTip();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
