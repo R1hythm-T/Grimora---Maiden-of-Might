@@ -29,10 +29,10 @@ public class Inventory : MonoBehaviour
     private UI_StatSlot[] statSlot;
 
     [Header("Items Cooldown")]
-    private float flaskCooldown;
-    private float lastTimeUsedFlask;
     private float armorCooldown;
     private float lastTimeUsedArmor;
+    public float flaskCooldown { get; private set; }
+    private float lastTimeUsedFlask;
 
     private void Awake()
     {

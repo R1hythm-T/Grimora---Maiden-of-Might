@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour, ISaveManager
@@ -28,6 +29,8 @@ public class PlayerManager : MonoBehaviour, ISaveManager
         currency = currency - _price;
         return true;
     }
+
+    public int GetCurrency() => currency;
 
     public void LoadData(GameData _data)
     {
