@@ -74680,6 +74680,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterUI: {fileID: 2026783695}
+  skillTreeUI: {fileID: 1423688627}
+  craftUI: {fileID: 738747030}
+  optionsUI: {fileID: 166345573}
   itemToolTip: {fileID: 1147202087}
   statToolTip: {fileID: 1061776234}
 --- !u!1001 &1420908779
