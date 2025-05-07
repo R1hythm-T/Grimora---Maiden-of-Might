@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class UI : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private GameObject characterUI;
+
+    public UI_ItemToolTip itemToolTip;
     void Start()
     {
         
