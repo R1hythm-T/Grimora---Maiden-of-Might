@@ -72946,7 +72946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 608776248}
-  currency: 21203
+  currency: 0
 --- !u!4 &872675986
 Transform:
   m_ObjectHideFlags: 0
@@ -75033,6 +75033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91871e4f3463ca9499dde1febdae496d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fileName: data.ggdev
 --- !u!4 &1039288527
 Transform:
   m_ObjectHideFlags: 0

@@ -34,11 +34,11 @@ public class PlayerManager : MonoBehaviour, ISaveManager
 
     public void LoadData(GameData _data)
     {
-        throw new System.NotImplementedException();
+        this.currency = _data.currency;
     }
 
     public void SaveData(ref GameData _data)
     {
-        throw new System.NotImplementedException();
+        _data.currency = this.currency;
     }
 }
