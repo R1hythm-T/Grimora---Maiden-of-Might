@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250e1a55dc6b81d4292686cc2d9f6f9b, type: 3}
   m_Name: Freeze enemies effect
   m_EditorClassIdentifier: 
+  effectDescription: Freeze enemies for 2s
   duration: 2
