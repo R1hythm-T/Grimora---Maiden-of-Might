@@ -33902,8 +33902,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingItems:
-  - {fileID: 11400000, guid: c9070e2b40125e2468ccf4d58f33fb6c, type: 2}
-  - {fileID: 11400000, guid: 7ccbbe8eedb796a409583e2767671952, type: 2}
   - {fileID: 11400000, guid: 12acfde5023867448af3d48bbaa96ced, type: 2}
   - {fileID: 11400000, guid: 564948a8ce4c95b439e86fb640109d83, type: 2}
   - {fileID: 11400000, guid: c0c6ec1002939de4d9e30826125980b4, type: 2}
@@ -33914,6 +33912,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2b911d96cd435ce4da177bd380ecffd5, type: 2}
   - {fileID: 11400000, guid: abcee2de1a1e3a7459bb03d880e79214, type: 2}
   - {fileID: 11400000, guid: df8875dd80fb2da49bd55239c0f3f518, type: 2}
+  - {fileID: 11400000, guid: 7ccbbe8eedb796a409583e2767671952, type: 2}
+  - {fileID: 11400000, guid: c9070e2b40125e2468ccf4d58f33fb6c, type: 2}
   equipment: []
   inventory: []
   stash: []
@@ -33922,6 +33922,7 @@ MonoBehaviour:
   equipmentSlotParent: {fileID: 1470961820}
   statSlotParent: {fileID: 200248539}
   loadedItems: []
+  loadedEquipment: []
 --- !u!4 &362975765
 Transform:
   m_ObjectHideFlags: 0
