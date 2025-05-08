@@ -33445,6 +33445,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d579095e04dc3af4ab5a0a3f49972b2a, type: 2}
   - {fileID: 11400000, guid: 2b911d96cd435ce4da177bd380ecffd5, type: 2}
   - {fileID: 11400000, guid: abcee2de1a1e3a7459bb03d880e79214, type: 2}
+  - {fileID: 11400000, guid: df8875dd80fb2da49bd55239c0f3f518, type: 2}
   equipment: []
   inventory: []
   stash: []
@@ -33452,6 +33453,7 @@ MonoBehaviour:
   stashSlotParent: {fileID: 1609172709}
   equipmentSlotParent: {fileID: 1470961820}
   statSlotParent: {fileID: 200248539}
+  loadedItems: []
 --- !u!4 &362975765
 Transform:
   m_ObjectHideFlags: 0
